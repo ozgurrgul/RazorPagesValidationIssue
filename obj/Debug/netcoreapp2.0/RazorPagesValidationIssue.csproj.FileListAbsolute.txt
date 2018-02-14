@@ -1,0 +1,10 @@
+/Users/ozgur/Desktop/bitfil/RazorPagesValidationIssue/bin/Debug/netcoreapp2.0/RazorPagesValidationIssue.deps.json
+/Users/ozgur/Desktop/bitfil/RazorPagesValidationIssue/bin/Debug/netcoreapp2.0/RazorPagesValidationIssue.runtimeconfig.json
+/Users/ozgur/Desktop/bitfil/RazorPagesValidationIssue/bin/Debug/netcoreapp2.0/RazorPagesValidationIssue.runtimeconfig.dev.json
+/Users/ozgur/Desktop/bitfil/RazorPagesValidationIssue/bin/Debug/netcoreapp2.0/RazorPagesValidationIssue.dll
+/Users/ozgur/Desktop/bitfil/RazorPagesValidationIssue/bin/Debug/netcoreapp2.0/RazorPagesValidationIssue.pdb
+/Users/ozgur/Desktop/bitfil/RazorPagesValidationIssue/obj/Debug/netcoreapp2.0/RazorPagesValidationIssue.csproj.CoreCompileInputs.cache
+/Users/ozgur/Desktop/bitfil/RazorPagesValidationIssue/obj/Debug/netcoreapp2.0/RazorPagesValidationIssue.AssemblyInfoInputs.cache
+/Users/ozgur/Desktop/bitfil/RazorPagesValidationIssue/obj/Debug/netcoreapp2.0/RazorPagesValidationIssue.AssemblyInfo.cs
+/Users/ozgur/Desktop/bitfil/RazorPagesValidationIssue/obj/Debug/netcoreapp2.0/RazorPagesValidationIssue.dll
+/Users/ozgur/Desktop/bitfil/RazorPagesValidationIssue/obj/Debug/netcoreapp2.0/RazorPagesValidationIssue.pdb

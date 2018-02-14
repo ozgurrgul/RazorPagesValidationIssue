@@ -1,0 +1,61 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    var userBalance = 0.000M;
+    var currencyId = "TRY";
+}
+
+<br>
+
+@if(Model.ModelState.Count > 0 && Model.ModelState.Values.SelectMany(v => v.Errors).Count() > 0) {
+    <div class="alert alert-danger">
+    @foreach (var r in Model.ModelState.Values.SelectMany(v => v.Errors))
+    {
+        <li>@r.ErrorMessage</li>
+    } 
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Withdrawal Form</h2>
+        <form method="post" asp-page-handler="Withdraw">
+            <input type="hidden" asp-for="@currencyId">
+            <div class="form-group">
+                <label for="address-input" asp-for="WithdrawalInput.Address">IBAN</label>
+                <input class="form-control" id="address-input" placeholder="TR" asp-for="WithdrawalInput.Address" autocomplete="off">
+                <span asp-validation-for="WithdrawalInput.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="withdraw-amount-input" asp-for="WithdrawalInput.Amount">Miktar</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" id="withdraw-amount-input" placeholder="" asp-for="WithdrawalInput.Amount" autocomplete="off">
+                    <div class="input-group-append">
+                        <span class="input-group-text">@currencyId</span>
+                        <button class="btn btn-secondary" type="button" onclick="useAllBalance();">@userBalance.ToString()</button>
+                    </div>
+                </div>
+                <span asp-validation-for="WithdrawalInput.Amount" class="text-danger"></span>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Withdraw</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-6">
+        <h2>Deposit Form</h2>
+        <form method="post" asp-page-handler="DepositBank">
+            <input type="hidden" asp-for="@currencyId">
+            <div class="form-group">
+                <label for="amount-input" asp-for="DepositBankInput.Amount">Miktar</label>
+                <div class="input-group">
+                    <input type="number" class="form-control" id="amount-input" placeholder="10" asp-for="DepositBankInput.Amount" autocomplete="off">
+                </div>
+                <span asp-validation-for="DepositBankInput.Amount" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Deposit</button>
+        </form>
+    </div>
+</div>
